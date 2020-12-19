@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Component Library</title>
+    <link href='styles.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -18,6 +19,7 @@
     <h1>This is Header one tag(Biggest of all)</h1>
     <h2>This is Header two tag(Second Biggest)</h2>
     <p>Normal Text and a free flowing wrap</p>
+    <p>This will have a <strong>bold</strong> text</p>
     <small>Comparetively smaller text </small>
 
     <hr>
@@ -25,17 +27,18 @@
     <h2>@container</h2>
 
     <h3>Fluid Container</h3>
-    <div>This is a fluid container and it goes till the end of the page</div>
+    <div class="container ">This is a fluid container and it goes till the end of the page</div>
 
     <h3>Center Container</h3>
-    <div>This is a centered container and it goes till the specified width of the page</div>
+    <div class="container container-center">This is a centered container and it goes till the specified width of the
+        page</div>
 
     <hr>
 
     <h2>@links</h2>
 
-    <a href="/">Primary Link</a>
-    <a href="/">Secondary Link</a>
+    <a class="primary-link link" href="/">Primary Link</a>
+    <a class="secondary-link link" href="/">Secondary Link</a>
     <a href="https://surajgupta07.netlify.app">Suraj Gupta</a>
 
     <hr>
@@ -43,21 +46,23 @@
     <h2>@lists</h2>
 
     <h3>Unordered lists</h3>
-    <ul>
+    <p>List without bullets</p>
+
+    <ul class="non-bullet">
         <li>Item One</li>
         <li>Item Two</li>
         <li>Item Three</li>
     </ul>
 
-    <h3>Unordered inline List</h3>
-    <ul>
-        <li>Inline Item One</li>
-        <li>Inline Item Two</li>
-        <li>Inline Item Three</li>
+    <h3>Unordered Inline List</h3>
+    <ul class="non-bullet">
+        <li class="list-item-inline">Inline Item One</li>
+        <li class="list-item-inline">Inline Item Two</li>
+        <li class="list-item-inline">Inline Item Three</li>
     </ul>
 
     <h3>Reverse Ordered List</h3>
-    <ol>
+    <ol reversed>
         <li>Itme One</li>
         <li>Item Two</li>
         <li>Item Three</li>
@@ -67,17 +72,17 @@
 
     <h2>@nav</h2>
 
-    <nav>
-        <div>I'm a Brand</div>
-        <ul>
-            <li>
-                <a href="/">Home</a>
+    <nav class="navigation container">
+        <div class="nav-brand">I'm a Brand</div>
+        <ul class="non-bullet nav-pills">
+            <li class="list-item-inline">
+                <a class="link link-active" href="/">Home</a>
             </li>
-            <li>
-                <a href="/">Products</a>
+            <li class="list-item-inline">
+                <a class="link" href="/">Products</a>
             </li>
-            <li>
-                <a href="/">About</a>
+            <li class="list-item-inline">
+                <a class="link" href="/">About</a>
             </li>
         </ul>
     </nav>
@@ -86,35 +91,47 @@
 
     <h2>@Header</h2>
 
-    <header>
-        <h1>Heading inside Hero</h1>
-        <img src="images/hero-img.svg" />
+    <header class="hero">
+        <img class="hero-img" src="images/hero-img.svg" />
+        <h1 class="hero-heading">Heading inside Hero</h1>
     </header>
 
     <hr>
 
     <h2>@sections</h2>
 
-    <section>
-        <h3>White Section</h3>
-        <p>This will have White background.</p>
+    <section class="section">
+        <div class="container container-center">
+            <h1>White Section</h1>
+            <p>This will have White background.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis sodales urna, vel molestie felis pharetra ornare. Maecenas posuere odio non neque malesuada pellentesque. In laoreet luctus maximus. Donec id erat malesuada, interdum risus non, porttitor sapien. Nunc imperdiet tellus ipsum, eget mollis sapien venenatis id. Sed ut tincidunt metus, at maximus tortor. Donec lacinia tincidunt vulputate. Vivamus vel ornare augue. Nunc vitae nisl arcu. Integer et tristique risus, at luctus ante. Etiam id posuere felis. Aliquam eget finibus odio. Cras fringilla maximus risus et convallis. Proin lobortis pellentesque massa eu viverra. Aliquam vel molestie neque. Duis pharetra fringilla massa, nec vestibulum est finibus at.</p>
+        </div>
     </section>
 
-    <section>
-        <h3>Off White Section</h3>
-        <p>This will have gray background.</p>
+    <section class="section offWhite">
+        <div class="container container-center">
+            <h1>Off White Section</h1>
+            <p>This will have gray background.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis sodales urna, vel molestie felis pharetra ornare. Maecenas posuere odio non neque malesuada pellentesque. In laoreet luctus maximus. Donec id erat malesuada, interdum risus non, porttitor sapien. Nunc imperdiet tellus ipsum, eget mollis sapien venenatis id. Sed ut tincidunt metus, at maximus tortor. Donec lacinia tincidunt vulputate. Vivamus vel ornare augue. Nunc vitae nisl arcu. Integer et tristique risus, at luctus ante. Etiam id posuere felis. Aliquam eget finibus odio. Cras fringilla maximus risus et convallis. Proin lobortis pellentesque massa eu viverra. Aliquam vel molestie neque. Duis pharetra fringilla massa, nec vestibulum est finibus at.</p>
+        </div>
     </section>
 
     <hr>
 
     <h2>@footer</h2>
 
-    <footer>
-        <div>This will contain small heading inside footer</div>
-        <ul>
-            <li>Social One</li>
-            <li>Social Two</li>
-            <li>Social Three</li>
+    <footer class="footer navigation">
+        <div class="footer-heder">This will contain small heading inside footer</div>
+        <ul class="non-bullet social-links">
+            <li class="list-item-inline">
+                <a class="link" href='/'>Social One</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href='/'>Social One</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href='/'>Social One</a>
+            </li>
         </ul>
     </footer>
 
