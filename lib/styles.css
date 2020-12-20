@@ -28,8 +28,10 @@ hr {
 
 /* Links */
 .link {
+    box-sizing: border-box;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    margin-top: 1rem !important;
 }
 
 .primary-link {
@@ -119,4 +121,9 @@ footer {
     padding: 2rem 1rem;
     text-align: center;
     color: white;
+}
+
+.footer .footer-header {
+    font-weight: bold;
+    font-size: x-large;
 }
